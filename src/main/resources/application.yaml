@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+
+springbootwebfluxjjwt:
+  password:
+    encoder:
+      secret: z[4L{PXU4Hk8%$eN
+      iteration: 33
+      keylength: 256
+  jjwt:
+    secret: z[4L{PXU4Hk8%$eN
+    expiration: 28800
+
+
+spring:
+  data:
+    mongodb:
+      database: scooby
