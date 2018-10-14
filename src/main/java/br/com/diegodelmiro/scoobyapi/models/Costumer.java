@@ -25,6 +25,7 @@ public class Costumer implements UserDetails {
 
     private String username;
     private String password;
+    @Indexed(unique = true)
     private String email;
     private Boolean enabled;
     private List<Role> roles;

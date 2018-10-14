@@ -9,7 +9,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class CostumerRequest {
+public class CostumerLoginRequest {
     private String email;
     private String password;
 }

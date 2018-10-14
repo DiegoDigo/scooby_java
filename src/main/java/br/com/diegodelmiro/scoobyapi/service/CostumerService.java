@@ -9,14 +9,18 @@ import reactor.core.publisher.Mono;
 @Service
 public class CostumerService {
 
+    private final CostumerReposity costumerReposity;
+
     @Autowired
-    CostumerReposity costumerReposity;
+    public CostumerService(CostumerReposity costumerReposity) {
+        this.costumerReposity = costumerReposity;
+    }
 
     public Mono<Costumer> findByEmail(String email) {
         return costumerReposity.findByEmail(email);
     }
 
-    public Mono<Void> deleteAll() {
+    public Mono<Void> delete() {
         return costumerReposity.deleteAll();
     }
 
